@@ -1,0 +1,18 @@
+<mat-card >
+
+  <div class = "image-container">
+
+    <img  class="base-image"  src="{{item.mainimage}}" />
+    <img  class="overlay-mage" mat-card-image src="{{item.overlayimage}}" *ngIf="item.overlayimage.length > 0">
+
+  </div>
+
+  <p class = " heading ">{{item.Heading }} </p>
+
+  <p class = "sub-heading" >{{item.Subheading }}</p>
+
+  <mat-divider [inset]="true"></mat-divider>
+
+  <p  class = "price" >{{item.Price | currency:'USD':'symbol-narrow':'4.0-0'}}</p>
+
+</mat-card>

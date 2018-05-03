@@ -1,0 +1,33 @@
+
+
+  <div  fxFlex="100" fxLayout="Column" class = "data-grid">
+
+    <div   fxFlex="90" fxLayout = "row" class = "grid-list"  >
+
+      <mat-grid-list   [cols]="breakpoint"  gutterSize="25px" rowHeight="220px"   *ngIf="displayItemList.length > 0" >
+
+        <mat-grid-tile *ngFor="let item of displayItemList">
+          <app-item-card [item]="item" >
+          </app-item-card>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+
+      <div *ngIf="displayItemList.length === 0" fxLayoutAlign="center">
+
+        No Data found for this search
+      </div>
+
+    </div>
+
+    <div   fxFlex="10" fxLayoutAlign="end" fxLayout = "row"   class = "pagination"  *ngIf="breakpoint < 5">
+
+      <mat-paginator [length]="itemList.length"
+                     [pageSize]="pageSize"
+                     (page)="pageEvent( $event)"
+                      >
+      </mat-paginator>
+    </div>
+
+  </div>
+

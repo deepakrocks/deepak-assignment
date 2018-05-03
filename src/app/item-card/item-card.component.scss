@@ -1,0 +1,35 @@
+mat-card{
+  width: 200px ;
+  min-height: 210px;
+  min-width : 200px;
+
+  .image-container {
+    .base-image {
+      width: 100%;
+      height: 100px !important;
+
+    }
+    .overlay-mage {
+      position: absolute;
+      bottom: 50%;
+      right: 35%;
+      width: 125px;
+      height: 80px;
+    }
+  }
+  .heading {
+    font-size: 14px ;
+    font-style: bold;
+  }
+
+   .sub-heading {
+    font-size: 10px ;
+  }
+
+  .price {
+    color: limegreen;
+    float: right;
+    font-size: 10px;
+  }
+
+}

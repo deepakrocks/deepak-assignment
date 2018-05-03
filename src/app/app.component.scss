@@ -1,0 +1,17 @@
+.hidden-router {
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+  height: 100% !important;
+}
+
+.app-style {
+  height: 100% !important;
+
+}
+
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}

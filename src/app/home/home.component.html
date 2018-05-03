@@ -1,0 +1,26 @@
+
+<div class = "home " fxLayout="Column" >
+
+  <div  fxFlex="100" class="base" fxLayout="Column">
+
+    <div   fxFlex="10" fxLayout = "row" class = "search" fxLayoutAlign="end"  >
+
+      <form [formGroup] = "searchForm" class="search-form">
+        <mat-form-field class="search-full-width">
+          <input matInput placeholder="Search Items "  formControlName ="searchItem" >
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div   fxFlex="90" fxLayout = "row"   class = "grid">
+      <data-grid   [itemList]="itemList" [searchItem]="searchForm.get('searchItem').value"  ></data-grid>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
